@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Image Gallery</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <h1>Creative Image Gallery</h1>
+  <div class="gallery-controls">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">🌿 Nature</button>
+    <button onclick="filterImages('city')">🏙️ City</button>
+  </div>
+  <div class="gallery" id="gallery">
+    <img src="1015-600x400.jpg" alt="Nature 1" data-category="nature" />
+    <img src="1025-600x400.jpg" alt="Nature 2" data-category="nature" />
+    <img src="1035-600x400.jpg" alt="City 1" data-category="city" />
+    <img src="1045-600x400.jpg" alt="City 2" data-category="city" />
+    <img src="1055-600x400.jpg" alt="Nature 3" data-category="nature" />
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+    <img id="lightbox-img" src="" alt="" />
+    <span class="next" onclick="changeImage(1)">&#10095;</span>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
